@@ -1,0 +1,26 @@
+{
+    "development": {
+        "username": "postgres",
+        "password": "yosua1234",
+        "database": "postgres-2_development",
+        "host": "database-1.c1oiy46wu6uq.ap-southeast-1.rds.amazonaws.com",
+        "dialect": "postgres",
+        "logging": false
+    },
+    "test": {
+        "username": "postgres",
+        "password": "yosua1234",
+        "database": "postgres-2_test",
+        "host": "database-1.c1oiy46wu6uq.ap-southeast-1.rds.amazonaws.com",
+        "dialect": "postgres",
+        "logging": false
+    },
+    "production": {
+        "username": "postgres",
+        "password": "yosua1234",
+        "database": "postgres-2_production",
+        "host": "database-1.c1oiy46wu6uq.ap-southeast-1.rds.amazonaws.com",
+        "dialect": "postgres",
+        "logging": false
+    }
+}

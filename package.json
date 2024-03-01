@@ -1,0 +1,62 @@
+{
+  "name": "management-api-sahat",
+  "version": "1.0.0",
+  "description": "Manajemen API",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha \"test/**/*_test.js\" --timeout=5000 --exit",
+    "test:one": "mocha --timeout=5000 --exit",
+    "cover": "nyc _mocha 'test/**/*_test.js' --recursive --exit",
+    "lint:scripts": "eslint --fix --ignore-path .eslintignore \"**/*.{js,json}\"",
+    "start": "node server.js",
+    "development": "nodemon -q server.js",
+    "build:sahat": "sequelize db:drop --config config/config.json && sequelize db:create --config config/config.json && sequelize db:migrate --config config/config.json && sequelize db:seed:all --config config/config.json",
+
+    "superadmin": "sequelize db:seed:undo && sequelize db:seed:all"
+  },
+  "nyc": {
+    "report-dir": "coverage",
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "keywords": [
+    "API",
+    "Restful",
+    "API"
+  ],
+  "author": "Sahat Parulian",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.32.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.8.0",
+    "sequelize": "^6.25.0",
+    "sequelize-cli": "^6.5.1",
+    "swagger-ui-express": "^4.5.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "chai-http": "^4.4.0",
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-mocha": "^10.2.0",
+    "eslint-plugin-n": "^16.5.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20",
+    "nyc": "^15.1.0",
+    "puppeteer": "^21.6.1",
+    "sinon": "^17.0.1",
+    "sinon-chai": "^3.7.0"
+  }
+}
